@@ -13,7 +13,7 @@ class TestMRU(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.temp_folder = tempfile.TemporaryDirectory()
-        print("Testing in folder {.name}.".format(cls.temp_folder))
+        print(("Testing in folder {.name}.".format(cls.temp_folder)))
         appdirs.user_config_dir = MagicMock(return_value=cls.temp_folder.name)
 
     def tearDown(self):
